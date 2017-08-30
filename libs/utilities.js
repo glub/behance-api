@@ -11,8 +11,8 @@ const qs = require('qs');
  * @private
  */
 const requestUrl = function requestUrl(endpoint, token, options) {
-  const query = `?${options ? qs.stringify(options) : ''}&client_id=${token}`;
-  return `https://api.behance.net/v2/${endpoint}${query}`;
+  const query = `?${options ? qs.stringify(options) : ''}&api_key=${token}`;
+  return `https://cc-api-behance.adobe.io/v2/${endpoint}${query}`;
 };
 
 /**
